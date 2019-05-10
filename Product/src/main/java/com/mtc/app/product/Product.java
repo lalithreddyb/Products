@@ -40,6 +40,6 @@ public class Product {
 		this.quantity = quantity;
 	}
 	
-	//changes 
+	//changes made in eclipse ide
 	
 }
