@@ -1,7 +1,17 @@
 package com.mtc.app.product;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Product")
 public class Product {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String description;
 	private String name;
@@ -39,6 +49,7 @@ public class Product {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
