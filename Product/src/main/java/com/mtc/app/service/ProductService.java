@@ -25,4 +25,14 @@ public class ProductService {
 		return productrepository.getOne(id);
 	}
 	
+	public Product addProduct(Product product)
+	{
+		return productrepository.saveAndFlush(product);
+	}
+	
+	public void deleteProduct(int id)
+	{
+		productrepository.deleteById(id);
+	}
+	
 }
